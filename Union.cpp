@@ -8,3 +8,5 @@ union MiUnion {
 int main() {
     MiUnion miVariable;
 }
+miVariable.entero = 42;
+std::cout << "Valor entero: " << miVariable.entero << std::endl;
