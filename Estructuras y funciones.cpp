@@ -27,7 +27,7 @@ void imprimirEstudiantePorReferencia(const Estudiante& estudiante) {
 // c. Pasar una estructura por dirección como argumento
 void imprimirEstudiantePorDireccion(const Estudiante* estudiante) {
     if (estudiante) {
-        std::cout << "Estudiante (por dirección):" << std::endl;
+        std::cout << "Estudiante (por direccion):" << std::endl;
         std::cout << "Nombre: " << estudiante->nombre << std::endl;
         std::cout << "Edad: " << estudiante->edad << " años" << std::endl;
         std::cout << "Promedio: " << estudiante->promedio << std::endl;
@@ -35,3 +35,17 @@ void imprimirEstudiantePorDireccion(const Estudiante* estudiante) {
         std::cout << "Error: Estudiante nulo." << std::endl;
     }
 }
+
+// d. De la programación funcional a la programación orientada a objetos
+class ListaEstudiantes {
+public:
+    void agregarEstudiante(const Estudiante& estudiante) {
+        listaEstudiantes.push_back(estudiante);
+    }
+
+    void imprimirListaEstudiantes() const {
+        std::cout << "Lista de Estudiantes:" << std::endl;
+        for (const auto& estudiante : listaEstudiantes) {
+            std::cout << "Nombre: " << estudiante.nombre << ", Edad: " << estudiante.edad << " años, Promedio: " << estudiante.promedio << std::endl;
+        }
+    }
