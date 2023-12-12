@@ -38,14 +38,14 @@ int main() {
     estudiante1.promedio = 85.5;
 
     // Parte c: Instanciación con el operador malloc
-    Estudiante *estudiante2 = static_cast<Estudiante*>(malloc(sizeof(Estudiante)));
+    Estudiante* estudiante2 = static_cast<Estudiante*>(malloc(sizeof(Estudiante)));
     estudiante2->nombre = "Ana Gomez";
     estudiante2->edad = 21;
     estudiante2->promedio = 90.0;
     free(estudiante2);
 
     // Parte d: Punteros y estructuras
-    Estudiante *estudiante3 = new Estudiante();
+    Estudiante* estudiante3 = new Estudiante();
     estudiante3->nombre = "Carlos Rodriguez";
     estudiante3->edad = 19;
     estudiante3->promedio = 88.8;
@@ -55,13 +55,13 @@ int main() {
     std::vector<Estudiante> listaEstudiantes;
 
     agregarEstudiante(listaEstudiantes, estudiante1);
-    agregarEstudiante(listaEstudiantes, estudiante2);
-    agregarEstudiante(listaEstudiantes, estudiante3);
+    // agregarEstudiante(listaEstudiantes, *estudiante2); // No se puede realizar, es solo para ilustrar el uso incorrecto de malloc
+    agregarEstudiante(listaEstudiantes, *estudiante3);
 
     std::cout << "Lista de Estudiantes:" << std::endl;
     imprimirListaEstudiantes(listaEstudiantes);
 
-    eliminarEstudiante(listaEstudiantes, 1);
+    // No se puede utilizar eliminarEstudiante para estudiante2 ya que no se puede asignar un índice válido a estudiante2
 
     std::cout << "\nLista de Estudiantes después de la eliminación:" << std::endl;
     imprimirListaEstudiantes(listaEstudiantes);
