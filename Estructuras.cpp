@@ -14,3 +14,11 @@ oid imprimirListaEstudiantes(const std::vector<Estudiante>& listaEstudiantes) {
         std::cout << "Nombre: " << estudiante.nombre << ", Edad: " << estudiante.edad << " años, Promedio: " << estudiante.promedio << std::endl;
     }
 }
+void eliminarEstudiante(std::vector<Estudiante>& listaEstudiantes, int indice) {
+    if (indice >= 0 && indice < listaEstudiantes.size()) {
+        listaEstudiantes.erase(listaEstudiantes.begin() + indice);
+        std::cout << "Estudiante eliminado correctamente." << std::endl;
+    } else {
+        std::cout << "Índice no válido." << std::endl;
+    }
+}
