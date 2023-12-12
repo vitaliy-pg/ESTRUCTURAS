@@ -5,3 +5,6 @@ struct Estudiante {
     int edad;
     float promedio;
 };
+int main() {
+    // Crear una instancia de la estructura Estudiante
+    Estudiante estudiante1;
