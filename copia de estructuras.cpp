@@ -11,3 +11,7 @@ Estudiante copiarEstudiante(const Estudiante& original) {
     copia.nombre = original.nombre;
     copia.edad = original.edad;
     copia.promedio = original.promedio;
+    return copia;
+}
+
+int main() {
