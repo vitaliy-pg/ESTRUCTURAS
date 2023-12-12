@@ -18,3 +18,10 @@ int main() {
 
     Estudiante estudianteOriginal = {"Juan Perez", 20, 85.5};
 }
+Estudiante estudianteCopia = copiarEstudiante(estudianteOriginal);
+
+// Imprimir la información del estudiante original
+std::cout << "Estudiante Original:" << std::endl;
+std::cout << "Nombre: " << estudianteOriginal.nombre << std::endl;
+std::cout << "Edad: " << estudianteOriginal.edad << " años" << std::endl;
+std::cout << "Promedio: " << estudianteOriginal.promedio << std::endl;
