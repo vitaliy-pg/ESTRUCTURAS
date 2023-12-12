@@ -25,3 +25,12 @@ std::cout << "Estudiante Original:" << std::endl;
 std::cout << "Nombre: " << estudianteOriginal.nombre << std::endl;
 std::cout << "Edad: " << estudianteOriginal.edad << " años" << std::endl;
 std::cout << "Promedio: " << estudianteOriginal.promedio << std::endl;
+
+
+std::cout << "\nEstudiante Copiado:" << std::endl;
+std::cout << "Nombre: " << estudianteCopia.nombre << std::endl;
+std::cout << "Edad: " << estudianteCopia.edad << " años" << std::endl;
+std::cout << "Promedio: " << estudianteCopia.promedio << std::endl;
+
+return 0;
+}
