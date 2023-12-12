@@ -1,22 +1,34 @@
 #include <iostream>
+#include <variant>
 #include <string>
-union MiUnion {
-    int entero;
-    float flotante;
-    std::string cadena;
-};
+
 int main() {
-    MiUnion miVariable;
-}
-miVariable.entero = 42;
-std::cout << "Valor entero: " << miVariable.entero << std::endl;
+    // Definir un tipo para la variable
+    using MiVariable = std::variant<int, float, std::string>;
 
+    // Crear una variable de tipo MiVariable e inicializar con un entero
+    MiVariable miVariable = 42;
 
-miVariable.flotante = 3.14f;
-std::cout << "Valor flotante: " << miVariable.flotante << std::endl;
+    // Acceder al valor y mostrarlo
+    if (std::holds_alternative<int>(miVariable)) {
+        std::cout << "Valor entero: " << std::get<int>(miVariable) << std::endl;
+    }
 
-miVariable.cadena = "Hola, mundo!";
-std::cout << "Valor cadena: " << miVariable.cadena << std::endl;
+    // Cambiar el valor a un flotante
+    miVariable = 3.14f;
 
-return 0;
+    // Acceder al valor y mostrarlo
+    if (std::holds_alternative<float>(miVariable)) {
+        std::cout << "Valor flotante: " << std::get<float>(miVariable) << std::endl;
+    }
+
+    // Cambiar el valor a una cadena de caracteres
+    miVariable = std::string("Hola, mundo!");
+
+    // Acceder al valor y mostrarlo
+    if (std::holds_alternative<std::string>(miVariable)) {
+        std::cout << "Valor cadena: " << std::get<std::string>(miVariable) << std::endl;
+    }
+
+    return 0;
 }
