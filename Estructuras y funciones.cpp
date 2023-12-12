@@ -52,3 +52,5 @@ public:
 private:
     std::vector<Estudiante> listaEstudiantes;
 };
+
+int main() {
