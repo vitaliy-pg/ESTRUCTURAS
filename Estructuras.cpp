@@ -25,3 +25,6 @@ void eliminarEstudiante(std::vector<Estudiante>& listaEstudiantes, int indice) {
 int main() {
     // Crear una lista de estudiantes
     std::vector<Estudiante> listaEstudiantes;
+    Estudiante estudiante1 = {"Juan Perez", 20, 85.5};
+    Estudiante estudiante2 = {"Ana Gomez", 21, 90.0};
+    Estudiante estudiante3 = {"Carlos Rodriguez", 19, 88.8};
