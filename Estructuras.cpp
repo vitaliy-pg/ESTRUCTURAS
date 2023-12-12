@@ -6,15 +6,20 @@ struct Estudiante {
     int edad;
     float promedio;
 };
+
+// Función para agregar un estudiante a la lista
 void agregarEstudiante(std::vector<Estudiante>& listaEstudiantes, const Estudiante& nuevoEstudiante) {
     listaEstudiantes.push_back(nuevoEstudiante);
 }
 
-oid imprimirListaEstudiantes(const std::vector<Estudiante>& listaEstudiantes) {
+// Función para imprimir la lista de estudiantes
+void imprimirListaEstudiantes(const std::vector<Estudiante>& listaEstudiantes) {
     for (const auto& estudiante : listaEstudiantes) {
         std::cout << "Nombre: " << estudiante.nombre << ", Edad: " << estudiante.edad << " años, Promedio: " << estudiante.promedio << std::endl;
     }
 }
+
+// Función para eliminar un estudiante de la lista por índice
 void eliminarEstudiante(std::vector<Estudiante>& listaEstudiantes, int indice) {
     if (indice >= 0 && indice < listaEstudiantes.size()) {
         listaEstudiantes.erase(listaEstudiantes.begin() + indice);
