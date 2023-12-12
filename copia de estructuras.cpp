@@ -15,3 +15,6 @@ Estudiante copiarEstudiante(const Estudiante& original) {
 }
 
 int main() {
+
+    Estudiante estudianteOriginal = {"Juan Perez", 20, 85.5};
+}
