@@ -35,3 +35,6 @@ int main() {
 
     std::cout << "Lista de Estudiantes:" << std::endl;
     imprimirListaEstudiantes(listaEstudiantes);
+
+    eliminarEstudiante(listaEstudiantes, 1);
+
