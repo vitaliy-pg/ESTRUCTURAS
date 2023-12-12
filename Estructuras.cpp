@@ -9,3 +9,8 @@ void agregarEstudiante(std::vector<Estudiante>& listaEstudiantes, const Estudian
     listaEstudiantes.push_back(nuevoEstudiante);
 }
 
+oid imprimirListaEstudiantes(const std::vector<Estudiante>& listaEstudiantes) {
+    for (const auto& estudiante : listaEstudiantes) {
+        std::cout << "Nombre: " << estudiante.nombre << ", Edad: " << estudiante.edad << " años, Promedio: " << estudiante.promedio << std::endl;
+    }
+}
