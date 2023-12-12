@@ -22,3 +22,6 @@ void eliminarEstudiante(std::vector<Estudiante>& listaEstudiantes, int indice) {
         std::cout << "Índice no válido." << std::endl;
     }
 }
+int main() {
+    // Crear una lista de estudiantes
+    std::vector<Estudiante> listaEstudiantes;
