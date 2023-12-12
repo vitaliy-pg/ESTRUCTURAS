@@ -5,3 +5,4 @@ union MiUnion {
     float flotante;
     std::string cadena;
 };
+int main() {
