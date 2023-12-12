@@ -38,3 +38,8 @@ int main() {
 
     eliminarEstudiante(listaEstudiantes, 1);
 
+    std::cout << "\nLista de Estudiantes después de la eliminación:" << std::endl;
+    imprimirListaEstudiantes(listaEstudiantes);
+
+    return 0;
+}
