@@ -6,3 +6,5 @@ struct Estudiante {
     int edad;
     float promedio;
 };
+
+typedef Estudiante MiEstudiante;
