@@ -7,3 +7,7 @@ struct Estudiante {
 };
 Estudiante copiarEstudiante(const Estudiante& original) {
     Estudiante copia;  // Se crea una nueva instancia de Estudiante
+
+    copia.nombre = original.nombre;
+    copia.edad = original.edad;
+    copia.promedio = original.promedio;
