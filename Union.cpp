@@ -6,3 +6,5 @@ union MiUnion {
     std::string cadena;
 };
 int main() {
+    MiUnion miVariable;
+}
