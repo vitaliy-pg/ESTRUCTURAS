@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+// Definición de la estructura Estudiante
 struct Estudiante {
     std::string nombre;
     int edad;
@@ -28,48 +30,40 @@ void eliminarEstudiante(std::vector<Estudiante>& listaEstudiantes, int indice) {
         std::cout << "Índice no válido." << std::endl;
     }
 }
+
 int main() {
-    // Parte a: Constitución de una estructura
-    struct Estudiante {
-        std::string nombre;
-        int edad;
-        float promedio;
-    };
+    // Crear una lista de estudiantes
+    std::vector<Estudiante> listaEstudiantes;
 
-    // Parte b: Instanciación de estructuras
-    Estudiante estudiante1;
-    estudiante1.nombre = "Juan Perez";
-    estudiante1.edad = 20;
-    estudiante1.promedio = 85.5;
+    // Parte a: Instanciación de estructuras
+    Estudiante estudiante1 = {"Juan Perez", 20, 85.5};
 
-    // Parte c: Instanciación con el operador malloc
-    Estudiante* estudiante2 = static_cast<Estudiante*>(malloc(sizeof(Estudiante)));
-    estudiante2->nombre = "Ana Gomez";
-    estudiante2->edad = 21;
-    estudiante2->promedio = 90.0;
-    free(estudiante2);
+    // Parte b: Instanciación con el operador malloc (NO RECOMENDADO EN C++)
+    Estudiante* estudiante2 = new Estudiante{"Ana Gomez", 21, 90.0};
 
-    // Parte d: Punteros y estructuras
+    // Parte c: Punteros y estructuras
     Estudiante* estudiante3 = new Estudiante();
     estudiante3->nombre = "Carlos Rodriguez";
     estudiante3->edad = 19;
     estudiante3->promedio = 88.8;
-    delete estudiante3;
 
-    // Parte e: Organización de la programación
-    std::vector<Estudiante> listaEstudiantes;
-
+    // Parte d: Organización de la programación
     agregarEstudiante(listaEstudiantes, estudiante1);
-    // agregarEstudiante(listaEstudiantes, *estudiante2); // No se puede realizar, es solo para ilustrar el uso incorrecto de malloc
+    agregarEstudiante(listaEstudiantes, *estudiante2);
     agregarEstudiante(listaEstudiantes, *estudiante3);
 
     std::cout << "Lista de Estudiantes:" << std::endl;
     imprimirListaEstudiantes(listaEstudiantes);
 
-    // No se puede utilizar eliminarEstudiante para estudiante2 ya que no se puede asignar un índice válido a estudiante2
+    // Eliminar un estudiante de la lista por índice
+    eliminarEstudiante(listaEstudiantes, 1);
 
     std::cout << "\nLista de Estudiantes después de la eliminación:" << std::endl;
     imprimirListaEstudiantes(listaEstudiantes);
+
+    // Liberar memoria asignada con new
+    delete estudiante2;
+    delete estudiante3;
 
     return 0;
 }
