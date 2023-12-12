@@ -15,3 +15,11 @@ void imprimirEstudiantePorValor(Estudiante estudiante) {
     std::cout << "Edad: " << estudiante.edad << " años" << std::endl;
     std::cout << "Promedio: " << estudiante.promedio << std::endl;
 }
+
+// b. Pasar una estructura por referencia como argumento
+void imprimirEstudiantePorReferencia(const Estudiante& estudiante) {
+    std::cout << "Estudiante (por referencia):" << std::endl;
+    std::cout << "Nombre: " << estudiante.nombre << std::endl;
+    std::cout << "Edad: " << estudiante.edad << " años" << std::endl;
+    std::cout << "Promedio: " << estudiante.promedio << std::endl;
+}
