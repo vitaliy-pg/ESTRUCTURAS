@@ -10,3 +10,7 @@ int main() {
 }
 miVariable.entero = 42;
 std::cout << "Valor entero: " << miVariable.entero << std::endl;
+
+
+miVariable.flotante = 3.14f;
+std::cout << "Valor flotante: " << miVariable.flotante << std::endl;
