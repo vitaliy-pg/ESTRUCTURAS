@@ -23,3 +23,15 @@ void imprimirEstudiantePorReferencia(const Estudiante& estudiante) {
     std::cout << "Edad: " << estudiante.edad << " años" << std::endl;
     std::cout << "Promedio: " << estudiante.promedio << std::endl;
 }
+
+// c. Pasar una estructura por dirección como argumento
+void imprimirEstudiantePorDireccion(const Estudiante* estudiante) {
+    if (estudiante) {
+        std::cout << "Estudiante (por dirección):" << std::endl;
+        std::cout << "Nombre: " << estudiante->nombre << std::endl;
+        std::cout << "Edad: " << estudiante->edad << " años" << std::endl;
+        std::cout << "Promedio: " << estudiante->promedio << std::endl;
+    } else {
+        std::cout << "Error: Estudiante nulo." << std::endl;
+    }
+}
