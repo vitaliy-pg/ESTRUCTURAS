@@ -23,11 +23,35 @@ void eliminarEstudiante(std::vector<Estudiante>& listaEstudiantes, int indice) {
     }
 }
 int main() {
-    // Crear una lista de estudiantes
+    // Parte a: Constitución de una estructura
+    struct Estudiante {
+        std::string nombre;
+        int edad;
+        float promedio;
+    };
+
+    // Parte b: Instanciación de estructuras
+    Estudiante estudiante1;
+    estudiante1.nombre = "Juan Perez";
+    estudiante1.edad = 20;
+    estudiante1.promedio = 85.5;
+
+    // Parte c: Instanciación con el operador malloc
+    Estudiante *estudiante2 = static_cast<Estudiante*>(malloc(sizeof(Estudiante)));
+    estudiante2->nombre = "Ana Gomez";
+    estudiante2->edad = 21;
+    estudiante2->promedio = 90.0;
+    free(estudiante2);
+
+    // Parte d: Punteros y estructuras
+    Estudiante *estudiante3 = new Estudiante();
+    estudiante3->nombre = "Carlos Rodriguez";
+    estudiante3->edad = 19;
+    estudiante3->promedio = 88.8;
+    delete estudiante3;
+
+    // Parte e: Organización de la programación
     std::vector<Estudiante> listaEstudiantes;
-    Estudiante estudiante1 = {"Juan Perez", 20, 85.5};
-    Estudiante estudiante2 = {"Ana Gomez", 21, 90.0};
-    Estudiante estudiante3 = {"Carlos Rodriguez", 19, 88.8};
 
     agregarEstudiante(listaEstudiantes, estudiante1);
     agregarEstudiante(listaEstudiantes, estudiante2);
