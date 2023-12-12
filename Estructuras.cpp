@@ -32,3 +32,6 @@ int main() {
     agregarEstudiante(listaEstudiantes, estudiante1);
     agregarEstudiante(listaEstudiantes, estudiante2);
     agregarEstudiante(listaEstudiantes, estudiante3);
+
+    std::cout << "Lista de Estudiantes:" << std::endl;
+    imprimirListaEstudiantes(listaEstudiantes);
