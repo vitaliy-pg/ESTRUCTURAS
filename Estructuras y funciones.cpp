@@ -49,3 +49,6 @@ public:
             std::cout << "Nombre: " << estudiante.nombre << ", Edad: " << estudiante.edad << " años, Promedio: " << estudiante.promedio << std::endl;
         }
     }
+private:
+    std::vector<Estudiante> listaEstudiantes;
+};
