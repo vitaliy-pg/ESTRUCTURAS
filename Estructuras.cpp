@@ -28,3 +28,7 @@ int main() {
     Estudiante estudiante1 = {"Juan Perez", 20, 85.5};
     Estudiante estudiante2 = {"Ana Gomez", 21, 90.0};
     Estudiante estudiante3 = {"Carlos Rodriguez", 19, 88.8};
+
+    agregarEstudiante(listaEstudiantes, estudiante1);
+    agregarEstudiante(listaEstudiantes, estudiante2);
+    agregarEstudiante(listaEstudiantes, estudiante3);
